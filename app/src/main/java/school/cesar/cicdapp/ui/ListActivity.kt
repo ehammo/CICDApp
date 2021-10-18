@@ -1,5 +1,6 @@
 package school.cesar.cicdapp.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
@@ -10,10 +11,11 @@ import school.cesar.cicdapp.viewmodel.ListViewModel
 
 class ListActivity : AppCompatActivity() {
 
-    val mViewModel by viewModels<ListViewModel>()
-    val list: MutableList<String> = mutableListOf()
-    val adapter: SimpleAdapter = SimpleAdapter(list)
+    private val mViewModel by viewModels<ListViewModel>()
+    private val list: MutableList<String> = mutableListOf()
+    private val adapter: SimpleAdapter = SimpleAdapter(list)
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ListActivityBinding.inflate(layoutInflater)

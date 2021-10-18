@@ -7,6 +7,7 @@ import school.cesar.cicdapp.domain.usecase.AddItem
 import school.cesar.cicdapp.domain.usecase.GetList
 
 class ListViewModel : ViewModel() {
+
     fun addItem(text: Editable?) {
         AddItem(text.toString())
     }
