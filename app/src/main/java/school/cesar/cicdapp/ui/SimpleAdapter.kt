@@ -1,7 +1,5 @@
 package school.cesar.cicdapp.ui
 
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -18,10 +16,7 @@ class SimpleAdapter(private val list: List<String>) : RecyclerView.Adapter<Simpl
         return VH(binding)
     }
 
-    override fun getItemCount():Int {
-        Log.i("duds", "getItemCount ${list.size}")
-        return list.size
-    }
+    override fun getItemCount() = list.size
 
     override fun onBindViewHolder(holder: VH, position: Int) {
         holder.title.text = list[position]
