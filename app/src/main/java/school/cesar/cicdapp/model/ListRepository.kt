@@ -8,7 +8,6 @@ object ListRepository: IListRepository {
 
     override fun getItemList() = list
     override fun addItem(newItem: String) {
-        Log.i("duds", "add $newItem")
         val listValue = list.value ?: mutableListOf()
         listValue.add(newItem)
         list.postValue(listValue)
