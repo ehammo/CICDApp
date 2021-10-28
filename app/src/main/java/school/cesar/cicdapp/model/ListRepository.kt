@@ -12,4 +12,9 @@ object ListRepository: IListRepository {
         listValue.add(newItem)
         list.postValue(listValue)
     }
+    fun addInt(inteiro: Int) {
+        val listValue = list.value ?: mutableListOf()
+        listValue.add(""+inteiro)
+        list.postValue(listValue)
+    }
 }
